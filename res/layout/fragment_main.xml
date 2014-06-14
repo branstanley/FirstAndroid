@@ -3,16 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:orientation="vertical">
+	android:orientation="vertical"
+    android:background="#FFFFFF">
  
 		
 	<fragment 
 	     android:name="megadice.awesome.MyFragment"
          android:id="@+id/my_fragment"
          android:layout_weight="3"	
-         android:layout_width="0dip"
+         android:layout_width="match_parent"
          android:layout_height="0dip" 
-         />
+         /> 
 	
 	
 	<LinearLayout 
@@ -27,7 +28,7 @@
 	
 	    <EditText
 	        android:id="@+id/meow"
-	        android:layout_width="0dp"
+	        android:layout_width="0dip"
 	        android:layout_height="match_parent"
 	        android:layout_weight="1"
 	        android:ems="10"

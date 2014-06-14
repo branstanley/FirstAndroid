@@ -18,10 +18,10 @@ public class MainActivity extends ActionBarActivity {
 	
 	public void clicking(View view){
 		Intent intent = new Intent(this, DisplayMessageActivity.class);
-		EditText et = (EditText)findViewById(R.id.meow);
-		String m = et.getText().toString();
+		//EditText et = (EditText)findViewById(R.id.meow);
+		//String m = et.getText().toString();
 		//et.setText("Some words, yo");
-		intent.putExtra(EXTRA_MESSAGE, m);
+		intent.putExtra(EXTRA_MESSAGE, "meep");
 		startActivity(intent);
 	}
 	
