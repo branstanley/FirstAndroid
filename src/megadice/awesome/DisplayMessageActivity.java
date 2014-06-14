@@ -3,12 +3,15 @@ package megadice.awesome;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.os.Build;
 
 public class DisplayMessageActivity extends ActionBarActivity {
@@ -18,10 +21,20 @@ public class DisplayMessageActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_message);
 
-		if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}
+		//TextView tv = (TextView)findViewById(R.id.moop);
+		Intent intent = getIntent();
+		
+		String message =  intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		
+		TextView tv = new TextView(this);
+		tv.setTextSize(30);
+		
+		tv.setText(message);
+
+		setContentView(tv);
+		
+		//tv.setText("Penis");
+		
 	}
 
 	@Override

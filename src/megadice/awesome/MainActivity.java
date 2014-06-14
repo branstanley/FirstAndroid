@@ -20,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
 		Intent intent = new Intent(this, DisplayMessageActivity.class);
 		EditText et = (EditText)findViewById(R.id.meow);
 		String m = et.getText().toString();
+		//et.setText("Some words, yo");
 		intent.putExtra(EXTRA_MESSAGE, m);
 		startActivity(intent);
 	}
