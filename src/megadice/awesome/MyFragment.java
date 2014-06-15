@@ -2,6 +2,7 @@ package megadice.awesome;
 
 
 import megadice.awesome.MainActivity.PlaceholderFragment;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -37,6 +38,12 @@ public class MyFragment extends Fragment{
 			Paint paint = new Paint();
 			paint.setColor(Color.BLUE);
 			canvas.drawLine(0, 0, 500, 500, paint);
+			
+			BitmapFactory.Options options = new BitmapFactory.Options();
+			options.inJustDecodeBounds = false;
+			Bitmap b = BitmapFactory.decodeResource(getResources(), R.drawable.derp_image, options);
+			
+			canvas.drawBitmap(b, 40, 40, paint);
 		}
 
 		@Override
